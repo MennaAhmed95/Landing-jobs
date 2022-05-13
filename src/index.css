@@ -1,13 +1,64 @@
+@import "~antd/dist/antd.css";
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.contain {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+ul > li {
+  list-style: none;
+}
+.ant-card-body {
+  padding: 10px;
+}
+.ant-card-meta-detail > div:not(:last-child) {
+  margin-bottom: 0px;
+}
+.containCand {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 90%;
+  padding: 1rem;
+}
+.background {
+  width: 100%;
+  height: 400px;
+  background-image: url("./assets/images/map.png");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+button.rec-dot {
+  display: none;
+}
+.rec-arrow-right,
+.rec-arrow-left,
+.rec-arrow-right:hover:enabled,
+.rec-arrow-left:hover:enabled,
+.rec-arrow-right:focus:enabled,
+.rec-arrow-left:focus:enabled {
+  background-color: transparent !important;
+  color: lightgray !important;
+  box-shadow: none !important;
+}
+
+.carousel {
+  width: 90% !important;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+}
+.rec-item-wrapper {
+  max-width: 175px !important;
+  margin: 0 0.5rem;
+}
+.myCrd.ant-card {
+  max-width: 175px;
+  border: none;
 }
