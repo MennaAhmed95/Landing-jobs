@@ -161,3 +161,6 @@ button.rec-dot {
   padding: 1.54rem 1rem;
   display: flex;
 }
+.cardIcons > .ant-card-body {
+  padding: 0;
+}
