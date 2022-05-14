@@ -5,15 +5,12 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getJobs } from "./../../redux/Jobs/action";
 
-const { Option } = Select;
-const { TabPane } = Tabs;
-const style = { padding: "8px 0" };
 function callback(key) {
   console.log(key);
 }
+const { TabPane } = Tabs;
 const JobSection = () => {
   const jobs = useSelector((state) => state.jobReducer.allJobs);
-  console.log(jobs);
   const [visable, setVisable] = useState(4);
 
   const dispatch = useDispatch();

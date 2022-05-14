@@ -1,6 +1,5 @@
 import { Tabs, Row, Col, Input, Button } from "antd";
 import { Select } from "antd";
-
 const { Option } = Select;
 const { TabPane } = Tabs;
 const style = { padding: "8px 0" };
@@ -37,22 +36,12 @@ const SearchTab = () => {
                 style={{ width: "100%" }}
                 placeholder="Select Industry"
                 optionFilterProp="children"
-                filterOption={(input, option) =>
-                  option.children.toLowerCase().indexOf(input.toLowerCase()) >=
-                  0
-                }
-                filterSort={(optionA, optionB) =>
-                  optionA.children
-                    .toLowerCase()
-                    .localeCompare(optionB.children.toLowerCase())
-                }
               >
-                <Option value="1">Not Identified</Option>
-                <Option value="2">Closed</Option>
-                <Option value="3">Communicated</Option>
-                <Option value="4">Identified</Option>
-                <Option value="5">Resolved</Option>
-                <Option value="6">Cancelled</Option>
+                <Option value="1">Full-stack Developer</Option>
+                <Option value="2">Front-end Developer</Option>
+                <Option value="3">Back-end Developer</Option>
+                <Option value="4">DevOps</Option>
+                <Option value="5">Project Management</Option>
               </Select>
             </div>
           </Col>

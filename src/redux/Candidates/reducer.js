@@ -13,7 +13,6 @@ const candidateReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case GET_Candidates:
       console.log({ ...action.payload });
-      debugger;
 
       return { ...state, allCandidates: action.payload };
 

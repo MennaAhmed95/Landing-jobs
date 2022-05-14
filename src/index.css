@@ -139,3 +139,25 @@ button.rec-dot {
   margin: 0 0.5rem;
   max-width: 17rem;
 }
+/* open position */
+.positions {
+  display: flex;
+  align-items: center;
+  flex-grow: 3;
+  justify-content: center;
+  width: 33.3%;
+}
+@media (max-width: 768px) {
+  .positions {
+    width: 50%;
+  }
+}
+@media (max-width: 576px) {
+  .positions {
+    width: 100%;
+  }
+}
+.positions > .ant-card-body {
+  padding: 1.54rem 1rem;
+  display: flex;
+}
