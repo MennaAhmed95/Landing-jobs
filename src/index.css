@@ -62,3 +62,80 @@ button.rec-dot {
   max-width: 175px;
   border: none;
 }
+/* Tab search */
+.ant-tabs-top > .ant-tabs-nav {
+  margin: 0;
+}
+.ant-row {
+  margin: 0 !important;
+}
+.searchTab.ant-tabs-card > .ant-tabs-nav .ant-tabs-tab {
+  font-weight: bold;
+  color: white;
+  background: black;
+}
+.searchTab.ant-tabs-card > .ant-tabs-nav .ant-tabs-tab-active {
+  font-weight: bold;
+  background: white;
+  color: black;
+}
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: black;
+}
+
+/*** job section***/
+.tabb {
+  border: 1px solid #fafafb;
+  padding: 1rem 0.5rem;
+  box-shadow: inset 0 0 0 15px #fafafb;
+}
+.tab2.ant-tabs > .ant-tabs-nav .ant-tabs-nav-wrap {
+  background: #fafafb;
+}
+.tab2.ant-tabs-card.ant-tabs-top > .ant-tabs-nav .ant-tabs-tab + .ant-tabs-tab {
+  margin: 0;
+}
+.tab2.ant-tabs > .ant-tabs-nav .ant-tabs-nav-list {
+  color: gray;
+  font-weight: bold;
+}
+.marg {
+  margin: 2rem 1rem;
+}
+.loadMore {
+  text-align: center;
+  font-weight: bold;
+  background: #f1f2f4;
+  height: 3rem;
+  border: 0;
+  text-transform: uppercase;
+}
+/* card job */
+.cardJob {
+  color: gray;
+  font-weight: bold;
+}
+.cardJob > .ant-card-body {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.btnStyle {
+  margin-right: 0.5rem;
+  background: #7df87d;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  padding: 2px;
+  height: 25px;
+  border: 0;
+}
+.jobtitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 0.5rem;
+  max-width: 17rem;
+}
