@@ -1,3 +1,4 @@
+import { SearchOutlined } from "@ant-design/icons";
 import { Tabs, Row, Col, Input, Button } from "antd";
 import { Select } from "antd";
 import { useState } from "react";
@@ -62,7 +63,7 @@ const SearchTab = ({ handleSearch }) => {
                 style={{ background: "black", height: "3rem" }}
                 onClick={() => handleSearch(job, reagion)}
               >
-                Search
+                <SearchOutlined /> Search
               </Button>
             </div>
           </Col>

@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import { getJobs } from "./redux/Jobs/action";
 import { useDispatch, useSelector } from "react-redux";
 import FeaturedSec from "./components/FeaturedSec";
+import SearchBar from "./components/SearchBar";
 
 function App() {
   const [job, setJob] = useState("");
@@ -52,7 +53,7 @@ function App() {
             <JobSection jobs={filteredData} />
           </Col>
           <Col xs={0} sm={0} md={0} lg={8} xl={8}>
-            0 1 300px
+            <SearchBar handleSearch={handleSearch} />
           </Col>
         </Row>
         <div style={{ height: "2rem" }}></div>

@@ -12,7 +12,6 @@ const FeaturedSec = () => {
             <FeaturedCard p1={p1} p2={p2} key={i} />
           ))}
         </Carousel>
-
         <Button
           block
           style={{
@@ -28,7 +27,6 @@ const FeaturedSec = () => {
           Apply for this job
         </Button>
       </Card>
-      {/* </Card> */}
     </div>
   );
 };
