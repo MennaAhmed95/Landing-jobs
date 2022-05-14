@@ -164,3 +164,13 @@ button.rec-dot {
 .cardIcons > .ant-card-body {
   padding: 0;
 }
+/*featured sec*/
+.slider > .slick-dots-bottom > li {
+  background: gray;
+}
+.slider > .slick-dots-bottom {
+  bottom: -25px;
+}
+.slider > .slick-dots li.slick-active button {
+  background: #3ebff8;
+}

@@ -6,6 +6,7 @@ import SearchTab from "./components/SearchTab";
 import { useEffect, useState } from "react";
 import { getJobs } from "./redux/Jobs/action";
 import { useDispatch, useSelector } from "react-redux";
+import FeaturedSec from "./components/FeaturedSec";
 
 function App() {
   const [job, setJob] = useState("");
@@ -59,8 +60,8 @@ function App() {
           <Col xs={24} sm={24} md={24} lg={16} xl={16}>
             <OpenPosition />
           </Col>
-          <Col xs={0} sm={0} md={0} lg={8} xl={8}>
-            0 1 300px
+          <Col xs={0} sm={0} md={0} lg={7} xl={7}>
+            <FeaturedSec />
           </Col>
         </Row>
       </section>
