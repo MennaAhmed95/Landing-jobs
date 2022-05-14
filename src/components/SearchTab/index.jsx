@@ -1,10 +1,13 @@
 import { Tabs, Row, Col, Input, Button } from "antd";
 import { Select } from "antd";
+import { useState } from "react";
 const { Option } = Select;
 const { TabPane } = Tabs;
 const style = { padding: "8px 0" };
 
-const SearchTab = () => {
+const SearchTab = ({ handleSearch }) => {
+  const [job, setJob] = useState("");
+  const [reagion, setReagion] = useState("");
   return (
     <Tabs type="card" style={{ marginTop: "-2.5rem" }} className="searchTab">
       <TabPane tab="FIND A JOB" key="1">
@@ -20,13 +23,19 @@ const SearchTab = () => {
           <Col className="gutter-row" span={6}>
             <div style={style}>
               <h3>Job</h3>
-              <Input placeholder="job title,keywords" />
+              <Input
+                placeholder="job title,keywords"
+                onChange={(e) => setJob(e.target.value.toLowerCase())}
+              />
             </div>
           </Col>
           <Col className="gutter-row" span={6}>
             <div style={style}>
               <h3>Location</h3>
-              <Input placeholder="city or reagion" />
+              <Input
+                placeholder="city or reagion"
+                onChange={(e) => setReagion(e.target.value.toLowerCase())}
+              />
             </div>
           </Col>
           <Col className="gutter-row" span={6}>
@@ -51,6 +60,7 @@ const SearchTab = () => {
                 type="primary"
                 block
                 style={{ background: "black", height: "3rem" }}
+                onClick={() => handleSearch(job, reagion)}
               >
                 Search
               </Button>

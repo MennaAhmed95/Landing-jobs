@@ -1,22 +1,16 @@
 import { Tabs, Row, Col, Input, Button, Card } from "antd";
 import { Select } from "antd";
 import JobCard from "../JobCard";
-import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { getJobs } from "./../../redux/Jobs/action";
+import { useState } from "react";
+// import { useDispatch, useSelector } from "react-redux";
+// import { getJobs } from "./../../redux/Jobs/action";
 
 function callback(key) {
   console.log(key);
 }
 const { TabPane } = Tabs;
-const JobSection = () => {
-  const jobs = useSelector((state) => state.jobReducer.allJobs);
+const JobSection = ({ jobs }) => {
   const [visable, setVisable] = useState(4);
-
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getJobs());
-  }, []);
   const showMore = () => {
     setVisable((prev) => prev + 4);
   };
@@ -30,9 +24,13 @@ const JobSection = () => {
                 .map((itm) => <JobCard key={itm} itm={itm} />)
             : ""}
           <Card>
-            <Button block className="loadMore" onClick={showMore}>
-              Load More Listings
-            </Button>
+            {jobs?.length > 0 ? (
+              <Button block className="loadMore" onClick={showMore}>
+                Load More Listings
+              </Button>
+            ) : (
+              <p style={{ textAlign: "center" }}> No Data Found</p>
+            )}
           </Card>
         </TabPane>
         <TabPane tab="FULL TIME" key="2">
